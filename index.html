@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>INTERNET+</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<style type="text/css">
+		.section { text-align: center; font: 16px "Microsoft Yahei"; color: #00DFB9;overflow: hidden;}
+	    .section1 .slide1{background: url(images/banner5.jpg) 80% no-repeat;background-size: 100% 100%;}
+	    .section1 .slide2{background: url(images/banner6.jpg) 80% no-repeat;background-size: 100% 100%;}
+	    .section1 .slide3{background: url(images/banner7.jpg) 80% no-repeat;background-size: 100% 100%;}
+	    .section1 .slide4{background: url(images/banner8.jpg) 80% no-repeat;background-size: 100% 100%;}
+	    .fp-prev{background: url(images/arrowr.png) no-repeat;transform: rotate(180deg);}
+	    .fp-next{background: url(images/arrowr.png) no-repeat;}
+	</style>
+	<script type="text/javascript" src='js/jquery-1.11.1.js'></script>
+	<script type="text/javascript" src='js/jquery.fullPage.min.js'></script>
+	<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nSxiPohfziUaCuONe4ViUP2N"></script>
+	<script>
+	$(function(){
+	    $('#dowebok').fullpage({
+	        anchors: ['page1', 'page2', 'page3', 'page4','page5', 'page6'],
+			menu: '#menu',
+	        loopBottom: true,
+	        'slidesNavigation':true,
+	        afterLoad: function(anchorLink, index){
+					if(index==1){
+						$('.section1').find('b').delay(500).animate({
+							left:'50%',
+							top:'20%'
+						},1500);
+					}
+					if(index == 2){
+						$('.section2').find('h2').delay(500).animate({
+							left: '50%'							
+						});
+						$('.section2').find('span').delay(500).animate({
+							left: '50%'							
+						});
+						$('.section2').find('ul').fadeIn(2000);
+						$('.section2').find('h4').delay(500).animate({
+							left: '50%'							
+						});
+					}
+					if(index == 3){
+						$('.section3').find('p').delay(500).animate({
+							bottom: '0'
+						}, 1500, 'easeOutExpo');
+					}
+					if(index == 4){
+						$('.section4').find('p').fadeIn(2000);
+					}
+					if(index == 5){
+						$('.section5').find('h3').fadeIn(2000);
+						$('.section5').find('h4').fadeIn(4000);
+						$('.section5').find('p').fadeIn(3000);
+						$('.section5').find('ul').fadeIn(3000);
+					}
+				},
+				onLeave: function(index,nextIndex, direction){
+					if(index==1){
+						$('.section1').find('b').delay(500).animate({
+							left:'100%',
+							top:'100%'
+						},1500);
+					}
+					if(index == '2'){
+						$('.section2').find('h2').delay(500).animate({
+							left: '-100%'							
+						});
+						$('.section2').find('span').delay(500).animate({
+							left: '120%'							
+						});
+						$('.section2').find('ul').css({
+							'display':'none'
+						});
+						$('.section2').find('h4').delay(500).animate({
+							left: '-100%'							
+						})
+					}
+					if(index == '3'){
+						$('.section3').find('p').delay(500).animate({
+							bottom: '-120%'
+						}, 1500, 'easeOutExpo');
+					}
+					if(index == '4'){
+						$('.section4').find('p').fadeOut(2000);
+					}
+					if(index == '5'){
+						$('.section5').find('h3').fadeOut(2000);
+						$('.section5').find('h4').fadeOut(2000);
+						$('.section5').find('p').fadeOut(2000);
+						$('.section5').find('ul').fadeOut(2000);
+					}
+				}
+	    });
+
+	    setInterval(function(){
+	        $.fn.fullpage.moveSlideRight();
+	    }, 3000);
+	});
+</script>
+
+<!-- 第四屏 -->
+<script type="text/javascript" src='js/rotate.js'></script>
+<!-- 第四屏script end -->
+
+</head>
+<body style="">
+	<div id="menu_con">
+		<div><img src="images/logo.png"></div>
+		<ul id="menu">	
+			<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+			<li data-menuanchor="page2"><a href="#page2">简介</a></li>
+			<li data-menuanchor="page3"><a href="#page3">案例</a></li>
+			<li data-menuanchor="page4"><a href="#page4">样片</a></li>
+			<li data-menuanchor="page5"><a href="#page5">关于</a></li>
+			<li data-menuanchor="page6"><a href="#page6">联系</a></li>
+		</ul>
+		<div class="_phone"><span><img src="images/phone.png"></span><b>4000-400-400</b><span><img src="images/more.png" style="margin-left: 20px;position: absolute;width: 30px;height: 30px;"></span></div>
+	</div>
+
+<div id="dowebok"> 
+	<!-- 第一屏  start  -->
+    <div class="section section1">
+        <div class="slide slide1">
+			<div id="mask"></div>
+			<span class="mask2"></span>						
+			<span class="w1">		
+				<span class="w1_0">9</span>	
+				<span class="w1_1">
+					<span class="w21">年专注 · 互联网+</span>
+					<span class="w22">WEBSITE</span>
+					<span class="w23">始于 2010 - 2018 展望未来<br>专注于设计体验，专业于解决方案</span>
+				</span>					
+			</span>
+        </div>
+        <div class="slide slide2">
+        	<h3 class="mask2_1"></h3>
+        	<span class="w2">
+				<span class="w21">设计控，也醉了</span>
+				<span class="w22">I·DESIGN</span><div class="line2"></div>
+				<span class="w23">不是非要高大上，只是醉心于设计<br>我们想，再上一个好案例</span>
+			</span>
+        </div>
+        <div class="slide slide3">
+       		<span class="w3">
+				<span class="w21">技术派，论研发</span>
+				<span class="w22">DEVELOPER</span><div class="line"></div>
+				<span class="w23">我说，业界没有最好的技术，只有最棒的技术开发者<br>定制研发，为您的客户和团队</span>
+			</span>
+		</div>
+        <div class="slide slide4">
+        	<span class="w3">
+				<span class="w21">先入为主，布局未来</span>
+				<span class="w22">LAYOUT</span><div class="line1"></div>
+				<span class="w23">全面布局<em>PC</em>端与<em>移动</em>端<br>抢占头等商机<br>基于<em>Html5</em>响应式布局，智能识别多种终端设备</span>
+			</span>
+        </div>
+    </div>
+	<!-- 第一屏  end -->
+	<!-- 第二屏   start -->
+    <div class="section section2">
+        <h2>WHAT CAN WE DO</h2>
+		<span>我们能做什么</span>
+		<ul id="two_box">
+			<li>
+				<i class="mask_t"></i>
+				<div>
+					 <img src="images/senke_xy00.jpg">
+					<!-- <strong class="iconfont">&#xe600;</strong> -->
+				</div>
+				<b>高端定制网站</b>
+				<p>企业高端定制网站设计<br>彰显品牌形象</p>
+			</li>
+			<li>
+				<i class="mask_t"></i>
+				<div>
+					<img src="images/senke_xy01.jpg">				
+					<!-- <strong class="iconfont">&#xe6ab;</strong> -->
+				</div>
+				<b>移动网站建设</b>
+				<p>定制手机网站 / 微网站制作<br>布局移动互联网</p>
+			</li>
+			<li>
+				<i class="mask_t"></i>
+				<div>
+					<img src="images/senke_xy02.jpg">				
+					<!-- <strong class="iconfont">&#xe64a;</strong> -->
+				</div>
+				<b>业务系统研发</b>
+				<p>基于 B/S 架构的系统研发<br>让业务办公轻松自如</p>
+			</li>
+			<li>
+				<i class="mask_t"></i>
+				<div>
+					<img src="images/senke_xy03.jpg">				
+					<!-- <strong class="iconfont">&#xe69c;</strong> -->
+				</div>
+				<b>服务器运维</b>
+				<p>我们不只提供云硬件和网络<br>更加注重技术运维</p>
+			</li>
+			<li>
+				<i class="mask_t"></i>
+				<div>
+					<img src="images/senke_xy04.jpg">				
+					<!-- <strong class="iconfont">&#xe61d;</strong> -->
+				</div>
+				<b>APP应用程序</b>
+				<p>基于 iOS / Android 应用开发<br>掌控智能终端时代</p>
+			</li>
+			<li>
+				<i class="mask_t"></i>
+				<div>
+					<img src="images/senke_xy05.jpg">				
+					<!-- <strong class="iconfont">&#xe62f;</strong> -->
+				</div>
+				<b>UI 美工设计</b>
+				<p>IIS等网站运行环境安全维护<br>业务的稳定来源</p>
+			</li>
+		</ul>
+		<h4 class="section2_p">One-stop Internet service</h4>
+    </div>   
+    <!-- 第二屏  end -->
+    <!-- 第三屏 start -->	
+     <div class="section section3">
+	    
+    	<div>
+    		<h3>cases</h3>
+    		<h4>案例展示</h4>
+    	</div>
+        <ul id="detailShow">
+        	<li class="_current">
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_1.jpg">
+        			</font>
+        			<span>
+					  <h5>古典家具公司网站模板</h5>
+					  <p>古典家具, 装饰画, 家居饰品&nbsp;</p>
+					</span>        			
+					<i></i>
+        		</a>
+        	</li>
+        	<li class="_current">
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_2.jpg">
+        			</font>
+        			<span>
+						<h5>家居公司，室内设计公司</h5>
+						<p>高端儒雅, 红色点缀, 视频展示, 文化&nbsp;</p>						
+					</span>       			
+					<i></i>
+        		</a>
+        	</li>
+        	<li class="_current">
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_3.jpg">
+        			</font>
+        			<span>
+						<h5>食品公司响应式网站模板</h5>
+						<p>食品公司, 食品之家, 零食点心&nbsp;</p>						
+					</span>        			
+					<i></i>
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_4.jpg">
+        			</font>
+        			<span>
+						<h5>服装-服装网站模板|服装企业网站模板</h5>
+						<p>服装制作, 服装企业, 裁剪服饰&nbsp;</p>						
+					</span>       			
+					<i></i>
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_5.jpg">
+        			</font>
+        			<span>
+						<h5>日用品销售公司响应式网站模板</h5>
+						<p>日用品, 清新质朴, 风格多变&nbsp;</p>						
+					</span>
+					<i></i>
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_6.jpg">
+        			</font>
+        			<span>
+						<h5>科技公司网站模板</h5>
+						<p>科技公司, 机器人浪潮, 硬件之都&nbsp;</p>						
+					</span>
+					<i></i>
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_7.jpg">
+        			</font>
+        			<span>
+						<h5>工程机械设备公司网站模板</h5>
+						<p>工程机械, 机械设备, 设备公司&nbsp;</p>
+					</span>        			
+					<i></i>
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_8.jpg">
+        			</font>
+        			<span>
+						<h5>珠宝首饰|珍珠翡翠|项链吊坠网站模板</h5>
+						<p>珠宝首饰, 珍珠翡翠, 项链吊坠&nbsp;</p>						
+					</span>       			
+					<i></i>
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_9.jpg">
+        			</font>
+        			<span>
+						<h5>机械汽修公司响应式网站模板</h5>
+						<p>机械汽修, 直观明确, 服务项目&nbsp;</p>						
+					</span>
+					<i></i>
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_10.jpg">
+        			</font>
+        			<span>
+						<h5>装饰设计公司网站模板</h5>
+						<p>专业性装饰, 住宅装饰, 材料环保化&nbsp;</p>
+					</span>        			
+					<i></i>
+        		</a>
+        	</li>
+        	<li>
+        		<a href="#">
+        			<font>
+        				<b><em><img src="images/more2.png"></em></b>
+        				<img src="images/demo3_11.jpg">
+        			</font>
+        			<span>
+						<h5>科技公司网站模板|科技企业网站</h5>
+						<p>科技企业, 源码下载, 多种字体&nbsp;</p>						
+					</span>
+					<i></i>
+        		</a>
+        	</li>
+        </ul>
+        <span id="_arrowl"><img src="images/arrowl.png"></span>
+        <span id="_arrowr"><img src="images/arrowr.png"></span>
+    </div> 
+    <!-- 第三屏 end -->
+
+    <!-- 第四屏 start -->
+    <div class="section section4">    	
+       	<div id="screen"></div>
+		<div id="bankImages">
+			<img alt="" src="images/sf01.jpg">
+			<img alt="" src="images/sf04.jpg">
+			<img alt="" src="images/sf10.jpg">
+			<img alt="" src="images/sf14.jpg">
+
+			<img alt="" src="images/sf15.jpg">
+			<img alt="" src="images/sf19.jpg">
+			<img alt="" src="images/sf26.jpg">
+			<img alt="" src="images/sf24.jpg">
+
+			<img alt="" src="images/sf41.jpg">
+			<img alt="" src="images/sf50.jpg">
+			<img alt="" src="images/5.jpg">
+			<img alt="" src="images/6.jpg">
+
+			<img alt="" src="images/1.jpg">
+			<img alt="" src="images/2.jpg">
+			<img alt="" src="images/3.jpg">
+			<img alt="" src="images/4.jpg">
+		</div>
+		<p>样片展示</p>
+    </div> 
+    <!-- 第四屏 end -->
+    <!-- 第五屏 start-->
+    <div class="section section5">
+		<ul id="five_menu">
+			<li class="sel">思想</li>
+			<li>关于</li>
+			<li>荣誉</li>
+		</ul>
+		<div id="five_content">
+			<div class="current five_con_one">
+	        	<h3>厚积薄发</h3>
+	        	<p>登上峰顶，不是为了饱览风光，是为了寻找更高的山峰<br>日出东方，告别了昨天的荣耀，将光芒照向更远的地方<br>一路上，我们更在意如何积累和沉淀</p>
+	        	<h4>下一秒，让你看，我们到底有多强</h4>
+        	</div>
+			<div class="five_con_two">
+				<h3>互联网+</h3>
+				<p>“互联网+”是创新2.0下的互联网发展的新业态，是知识社会创新2.0推动下的互联网形态演进及其催生的经济社会发展新形态。“互联网+”是互联网思维的进一步实践成果，推动经济形态不断地发生演变，从而带动社会经济实体的生命力，为改革、创新、发展提供广阔的网络平台。</p>
+			</div>
+			<div class="five_con_three">
+				<h3>放下荣誉，放眼未来</h3>
+				<ul>
+					<li>2009年-荣获广东省创新企业</li>
+					<li>2010年-设计联盟评选为金牌设计企业</li>
+					<li>2011年-荣获中关村高新技术企业</li>
+					<li>2012年-成功注册 " 互联网+ " 商标，树立品牌</li>
+					<li>2013年-已拥有自主知识产权，国家软件著作权达12项之多</li>
+				</ul>
+			</div>
+		</div>		       
+   	 </div>  	
+   	<!-- 第五屏  end -->
+
+   	<!-- 第六屏 start -->
+    <div class="section section6">
+        <div class="left">
+			<div id="allmap" class="container"></div>
+		</div>
+		<h3>联系我们</h3>
+		<div class="right">
+			<h4>400-123-4567</h4>
+			<ul>
+				<li>联系电话：15687593754</li>
+				<li>Email:youremail@126.com</li>
+				<li>Copyright 2008-2015互联网 版权所有</li>
+				<li>豫ICP备 1234567890 号</li>
+				<li>地址：河南省郑州市二七区河医立交桥</li>
+			</ul>
+		</div>		
+    </div>
+    <!-- 第六屏 end -->
+
+   
+</div>
+
+	<!-- 第二屏script start -->
+	<script type="text/javascript">
+		var start,end;
+		var flag=true;
+		$('#two_box li').hover(function(){
+	    		start=Date.now();//获取当前的时间
+	    		if(flag){
+					$(this).find('i').animate({
+		    			'height':'220px'
+		    		},700);
+		    		$(this).find('div').find('img').css({
+		    			'border':'none'			
+		    		}).animate({
+		    			'margin-top':'10px'
+		    		},20);   
+		    		// $(this).find('div').find('strong').css({
+		    		// 	'border':'none',
+		    		// 	'color':'#fff' 			
+		    		// }).animate({
+		    		// 	'margin-top':'10px',
+	    			// 	'margin-left':'16px'
+		    		// },20); 
+		    		$(this).find('b').css({   			
+		    			'color':'#fff'
+		    		}).animate({'top':'120px'},20); 	
+		    		$(this).find('p').css({
+		    			'display':'block',
+		    			'color':'#fff'   			
+		    		}).animate({'top':'140px'},20);
+				}	    			
+	    	},function(){
+	    		$(this).find('i').stop();
+	    		$(this).find('div').stop();
+	    		$(this).find('b').stop();
+	    		$(this).find('p').stop();
+
+	    		$(this).find('i').animate({
+	    			'height':'0px'
+	    		},200);
+	    		$(this).find('div').find('img').css({
+	    			'border':'' 			
+	    		}).animate({
+	    			'margin-top':'24px'
+	    		},0);
+	    		// $(this).find('div').find('strong').css({
+	    		// 	'border':'' ,
+	    		// 	'color':'#00DFB9'  			
+	    		// }).animate({
+	    		// 	'margin-top':'24px',
+	    		// 	'margin-left':'4px'
+	    		// },0);
+	    		$(this).find('b').css({   			
+	    			'color':'#393939'
+	    		}).animate({'top':'160px'},0); 
+	    		$(this).find('p').css({
+	    			'display':'none',
+	    			'color':'#393939'   			
+	    		}).animate({'top':'180px'},0);
+	    		end=Date.now();
+	    		if((end-start)<130){
+	    			flag=false;
+	    		}else{
+	    			flag=true;
+	    		}	    		
+	    	});
+    </script>
+	<!-- 第二屏script end-->
+
+	<!-- 第三屏script start -->
+	<script type="text/javascript">
+        var index_1=3;
+        var isAble_r=true;
+        var isAble_l=true;
+        $('#_arrowr').click(function(){
+        	var _length=$('#detailShow li').size();
+	        console.log(_length,index_1);
+	        if(index_1<_length){
+        		isAble_r=true;
+        	}
+        	if(isAble_r){
+        		$('#detailShow li').eq(index_1).addClass('_current');
+	        	$('#detailShow li').eq(index_1-3).removeClass('_current');	        	
+	        	index_1++;
+	        	if(index_1==_length){
+	        		isAble_r=false;
+	        	}
+        	}        	       	
+        });
+        $('#_arrowl').click(function(){        	
+        	var _length=$('#detailShow li').size();
+        	console.log(_length,index_1);
+        	if(index_1>0){
+        		isAble_l=true;
+        	}
+        	if(isAble_l){
+        		index_1--;
+        		if(index_1-3==-1){
+	        		$('#detailShow li').eq(index_1).removeClass('_current');
+	        		$('#detailShow li').eq(_length-1).addClass('_current');
+	        	}else if(index_1-3==-2){
+	        		$('#detailShow li').eq(index_1).removeClass('_current');
+	        		$('#detailShow li').eq(_length-2).addClass('_current');
+	        	}else{
+	        		$('#detailShow li').eq(index_1).removeClass('_current');
+	        		$('#detailShow li').eq(index_1-3).addClass('_current');
+	        	}
+	        	if(index_1<-2){
+	        		isAble_l=false;
+	        		index_1=_length;
+	        	}
+        	}       	       	       	
+        });
+       
+    	$('#detailShow li').hover(function(){
+    		$(this).find('b').animate({
+    			'height':'300px'
+    		},500);
+    		$(this).find('i').animate({
+    			'height':'80px',
+    			'margin-top':'-80px'
+    		},500);
+    		$(this).find('h5').css({
+    			'color':'#fff'
+    		});
+    		$(this).find('p').css({
+    			'color':'#fff'
+    		});
+    		$(this).find('em').css({
+    			'display':'block'
+    		});
+    	},function(){
+    		$(this).find('b').animate({
+    			'height':'0px'
+    		},500);
+    		$(this).find('i').animate({
+    			'height':'2px',
+    			'margin-top':'0px'
+    		},500);
+    		$(this).find('h5').css({
+    			'color':''
+    		});
+    		$(this).find('p').css({
+    			'color':''
+    		});
+    		$(this).find('em').css({
+    			'display':'none'
+    		});
+    	});
+    </script>
+
+	<!-- 第三屏script end-->
+
+	<!-- 第四屏script start -->
+ 	<script type="text/javascript">
+		/* ==== start script ==== */
+		onresize = tv.resize;
+		tv.init();
+	</script>
+	<!-- 第四屏script end-->
+
+	<!-- 第五屏script start -->
+	<script type="text/javascript">
+   		var a=0;//索引
+   		var t1=setInterval(autoSelect,4000);
+	   	function autoSelect(){
+	   		a++;//位置	   			   		
+	   		$('#five_menu li').eq(a).addClass('sel').siblings().removeClass('sel');	   		
+	   		$('#five_content div').eq(a).addClass('current').siblings().removeClass('current'); 
+	   		$('#five_content div').eq(a).find('h3').fadeIn(2000);
+			$('#five_content div').eq(a).siblings().find('h3').css('display','none');
+			$('#five_content div').eq(a).find('p').fadeIn(3000);
+			$('#five_content div').eq(a).siblings().find('p').css('display','none');
+			$('#five_content div').eq(a).find('h4').fadeIn(4000);
+			$('#five_content div').eq(a).siblings().find('h4').css('display','none');
+			$('#five_content div').eq(a).find('ul').fadeIn(3000);
+			$('#five_content div').eq(a).siblings().find('ul').css('display','none');
+	   		if(a==2){
+	   			a=-1;
+	   		}
+	   	}
+   		
+		$('#five_menu li').click(function(){
+			//当前节点添加样式，兄弟节点移除样式
+			$(this).addClass('sel').siblings().removeClass('sel');
+			var index1=$(this).index();//位置
+			$('#five_content div').eq(index1).find('h3').fadeIn(2000);
+			$('#five_content div').eq(index1).siblings().find('h3').css('display','none');
+			$('#five_content div').eq(a).find('p').fadeIn(3000);
+			$('#five_content div').eq(a).siblings().find('p').css('display','none');
+			$('#five_content div').eq(a).find('h4').fadeIn(4000);
+			$('#five_content div').eq(a).siblings().find('h4').css('display','none');
+			$('#five_content div').eq(a).find('ul').fadeIn(2000);
+			$('#five_content div').eq(a).siblings().find('ul').css('display','none');
+			$('#five_content div').eq(index1).addClass('current').siblings().removeClass('current'); 
+		});
+   	</script>
+   	<!-- 第五屏script end -->
+
+   	<!-- 第六屏script start -->
+	<script type="text/javascript">
+		var map = new BMap.Map("allmap");    // 创建Map实例
+		map.centerAndZoom(new BMap.Point(113.65, 34.76), 11);  // 初始化地图,设置中心点坐标和地图级别
+		//添加地图类型控件
+		map.addControl(new BMap.MapTypeControl({
+			mapTypes:[
+	            BMAP_NORMAL_MAP,
+	            BMAP_HYBRID_MAP
+	        ]}));	  
+		map.setCurrentCity("郑州");          // 设置地图显示的城市 此项是必须设置的
+		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	</script>
+	<!-- 第六屏script end -->	
+</body>
+</html>
